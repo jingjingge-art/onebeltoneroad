@@ -12,7 +12,7 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/DEvmIb/famelack-channels-m3u/refs/heads/main/m3u/tw.m3u"
 ]
 
-# 国内省份关键词库，可以继续扩充
+# 国内省份关键词库
 PROVINCE_KEYWORDS = {
     "北京": ["北京"],
     "上海": ["上海"],
@@ -52,40 +52,32 @@ PROVINCE_KEYWORDS = {
 
 
 def is_all_english(text: str) -> bool:
-    # 判断频道名称是否主要为英文
     if not text:
         return False
-    # 去掉空格符号
     clean = re.sub(r'[\s\-_0-9]', '', text)
     if len(clean) == 0:
         return False
-    # 如果绝大部分字符是英文字母
     eng_count = sum(1 for c in clean if c.isalpha() and c.isascii())
     return eng_count / len(clean) > 0.7
 
 
 def detect_group(channel_name: str) -> str:
-    # 优先省份匹配
     for group_name, keywords in PROVINCE_KEYWORDS.items():
         for kw in keywords:
             if kw in channel_name:
                 return group_name
-    # 判断英文频道 → 一带一路
     if is_all_english(channel_name):
         return "一带一路"
-    # 无法识别
     return "地下党"
 
 
 def parse_m3u(content: str):
-    """解析m3u / txt直播列表，返回 [(channel_name, url)]"""
     results = []
     lines = content.splitlines()
     i = 0
     while i < len(lines):
         line = lines[i].strip()
         if line.startswith("#EXTINF"):
-            # 提取频道名
             name_match = re.search(r',([^,]+)$', line)
             if name_match:
                 name = name_match.group(1).strip()
@@ -97,7 +89,6 @@ def parse_m3u(content: str):
                     if url.startswith("http"):
                         results.append((name, url))
         elif line.startswith("http"):
-            # txt直链格式，没有#EXTINF，频道名先用url简单标记
             name = f"直播_{line[-30:]}"
             results.append((name, line))
         i += 1
@@ -117,18 +108,30 @@ def main():
         except Exception as e:
             print(f"拉取 {url} 失败: {str(e)}")
 
-    # 输出合并后的m3u文件
-    output_lines = ["#EXTM3U"]
+    # 生成 merged_live.m3u
+    output_m3u = ["#EXTM3U"]
     for group_name, channels in sorted(group_data.items()):
-        output_lines.append(f"#EXTINF:-1 group-title=\"{group_name}\",=====【{group_name}】=====")
-        output_lines.append("http://#")
+        output_m3u.append(f"#EXTINF:-1 group-title=\"{group_name}\",=====【{group_name}】=====")
+        output_m3u.append("http://#")
         for ch_name, ch_url in channels:
-            output_lines.append(f'#EXTINF:-1 group-title="{group_name}",{ch_name}')
-            output_lines.append(ch_url)
+            output_m3u.append(f'#EXTINF:-1 group-title="{group_name}",{ch_name}')
+            output_m3u.append(ch_url)
 
     with open("merged_live.m3u", "w", encoding="utf-8") as f:
-        f.write("\n".join(output_lines))
-    print("✅ 文件生成完成 merged_live.m3u")
+        f.write("\n".join(output_m3u))
+    print("✅ merged_live.m3u 生成成功")
+
+    # ========== 仓库根目录生成【大陆电视直播.txt】 ==========
+    txt_lines = []
+    for group_name, channels in sorted(group_data.items()):
+        txt_lines.append(f"=====【{group_name}】=====")
+        for ch_name, ch_url in channels:
+            txt_lines.append(f"{ch_name},{ch_url}")
+        txt_lines.append("")
+
+    with open("大陆电视直播.txt", "w", encoding="utf-8") as f:
+        f.write("\n".join(txt_lines))
+    print("✅ 大陆电视直播.txt 在根目录生成成功！")
 
 
 if __name__ == "__main__":
