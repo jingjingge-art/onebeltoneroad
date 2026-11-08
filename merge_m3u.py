@@ -2,14 +2,15 @@ import requests
 import re
 from collections import defaultdict
 
-# 远程源列表
+# 远程源列表，新增 shanghaieye.txt
 SOURCE_URLS = [
     "https://raw.githubusercontent.com/djshxjsh233/migu/refs/heads/main/live.txt",
     "https://raw.githubusercontent.com/willisfeng/migu/refs/heads/main/migu.m3u",
     "https://raw.githubusercontent.com/ioptu/migu-video/refs/heads/main/migu.m3u",
     "https://raw.githubusercontent.com/DEvmIb/famelack-channels-m3u/refs/heads/main/m3u/hk.m3u",
     "https://raw.githubusercontent.com/DEvmIb/famelack-channels-m3u/refs/heads/main/m3u/my.m3u",
-    "https://raw.githubusercontent.com/DEvmIb/famelack-channels-m3u/refs/heads/main/m3u/tw.m3u"
+    "https://raw.githubusercontent.com/DEvmIb/famelack-channels-m3u/refs/heads/main/m3u/tw.m3u",
+    "https://raw.githubusercontent.com/jingjingge-art/SHEYE/refs/heads/main/shanghaieye.txt"
 ]
 
 # 国内省份关键词库
@@ -72,11 +73,16 @@ def detect_group(channel_name: str) -> str:
 
 
 def parse_m3u(content: str):
+    """解析m3u / txt直播列表，返回 [(channel_name, url)]"""
     results = []
     lines = content.splitlines()
     i = 0
     while i < len(lines):
         line = lines[i].strip()
+        # 适配 #genre# 格式txt
+        if line.endswith(",#genre#"):
+            i += 1
+            continue
         if line.startswith("#EXTINF"):
             name_match = re.search(r',([^,]+)$', line)
             if name_match:
@@ -88,6 +94,12 @@ def parse_m3u(content: str):
                     url = lines[i].strip()
                     if url.startswith("http"):
                         results.append((name, url))
+        elif "," in line and not line.startswith("#"):
+            # 解析 txt格式: name,url
+            sp = line.split(",", maxsplit=1)
+            if len(sp) == 2 and sp[1].startswith("http"):
+                ch_name, ch_url = sp
+                results.append((ch_name.strip(), ch_url.strip()))
         elif line.startswith("http"):
             name = f"直播_{line[-30:]}"
             results.append((name, line))
@@ -111,7 +123,7 @@ def main():
     # 生成 merged_live.m3u
     output_m3u = ["#EXTM3U"]
     for group_name, channels in sorted(group_data.items()):
-        output_m3u.append(f"#EXTINF:-1 group-title=\"{group_name}\",=====【{group_name}】=====")
+        output_m3u.append(f'#EXTINF:-1 group-title="{group_name}",=====【{group_name}】=====')
         output_m3u.append("http://#")
         for ch_name, ch_url in channels:
             output_m3u.append(f'#EXTINF:-1 group-title="{group_name}",{ch_name}')
@@ -121,10 +133,10 @@ def main():
         f.write("\n".join(output_m3u))
     print("✅ merged_live.m3u 生成成功")
 
-    # ========== 仓库根目录生成【大陆电视直播.txt】 ==========
+    # ========== 输出标准IPTV txt格式：分组名,#genre# 频道名,地址 ==========
     txt_lines = []
     for group_name, channels in sorted(group_data.items()):
-        txt_lines.append(f"=====【{group_name}】=====")
+        txt_lines.append(f"{group_name},#genre#")
         for ch_name, ch_url in channels:
             txt_lines.append(f"{ch_name},{ch_url}")
         txt_lines.append("")
