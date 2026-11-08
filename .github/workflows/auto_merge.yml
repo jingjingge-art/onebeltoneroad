@@ -1,0 +1,34 @@
+name: 自动合并直播源
+on:
+  schedule:
+    - cron: '*/20 * * * *' # 每20分钟执行一次
+  workflow_dispatch: # 支持手动点击运行测试
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 拉取仓库代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 设置Python环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安装依赖
+        run: |
+          pip install requests
+
+      - name: 运行合并脚本
+        run: python merge_m3u.py
+
+      - name: 提交更新文件
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add merged_live.m3u
+          git commit -m "🤖 自动更新直播源 $(date +'%Y-%m-%d %H:%M')" || echo "没有文件变更，跳过提交"
+          git push
