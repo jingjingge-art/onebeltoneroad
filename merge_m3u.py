@@ -10,7 +10,8 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/DEvmIb/famelack-channels-m3u/refs/heads/main/m3u/hk.m3u",
     "https://raw.githubusercontent.com/DEvmIb/famelack-channels-m3u/refs/heads/main/m3u/my.m3u",
     "https://raw.githubusercontent.com/DEvmIb/famelack-channels-m3u/refs/heads/main/m3u/tw.m3u",
-    "https://raw.githubusercontent.com/jingjingge-art/SHEYE/refs/heads/main/shanghaieye.txt"
+    "https://raw.githubusercontent.com/jingjingge-art/SHEYE/refs/heads/main/shanghaieye.txt",
+    "https://raw.githubusercontent.com/jingjingge-art/amazon/refs/heads/main/%E5%8F%B0%E5%8C%97%E4%91%9E%E8%B5%B7%E6%9D%A5.m3u"
 ]
 
 # 国内省份关键词库
