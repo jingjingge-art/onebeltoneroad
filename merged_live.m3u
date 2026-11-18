@@ -49,6 +49,72 @@ https://live.wcetv.com/hls/master-ttvnews.m3u8
 https://mobile.ccdntech.com/transcoder/_definst_/vod164_Live/live/chunklist_w1177047531.m3u8
 #EXTINF:-1 group-title="一带一路",shanghaieye
 https://live.shanghaieye.cn/live/24h.m3u8?auth_key=1795048381-0-0-157aba591a9854c0a455f9e1a831e04e
+#EXTINF:-1 group-title="一带一路",TVBS
+http://1.170.136.51:8022/udp/224.1.4.153:11111
+#EXTINF:-1 group-title="一带一路",CNN International
+http://1.170.136.51:8022/udp/224.1.4.235:11111
+#EXTINF:-1 group-title="一带一路",BBC World News
+http://1.170.136.51:8022/udp/224.1.4.52:11111
+#EXTINF:-1 group-title="一带一路",Channel NewsAsia
+http://1.170.136.51:8022/udp/224.1.4.139:11111
+#EXTINF:-1 group-title="一带一路",Bloomberg TV
+http://1.170.136.51:8022/udp/224.1.4.197:11111
+#EXTINF:-1 group-title="一带一路",FRANCE24(English)
+http://1.170.136.51:8022/udp/224.1.4.166:11111
+#EXTINF:-1 group-title="一带一路",Euronews
+http://1.170.136.51:8022/udp/224.1.4.119:11111
+#EXTINF:-1 group-title="一带一路",TaiwanPlus
+http://1.170.136.51:8022/udp/230.1.2.210:11111
+#EXTINF:-1 group-title="一带一路",CinemaWorld
+http://1.170.136.51:8022/udp/230.1.2.201:11111
+#EXTINF:-1 group-title="一带一路",CatchPlay電影台
+http://1.170.136.51:8022/udp/230.1.2.217:11111
+#EXTINF:-1 group-title="一带一路",Warner TV
+http://1.170.136.51:8022/udp/224.1.4.234:11111
+#EXTINF:-1 group-title="一带一路",ROCK Entertainment
+http://1.170.136.51:8022/udp/224.1.4.131:11111
+#EXTINF:-1 group-title="一带一路",tvN
+http://1.170.136.51:8022/udp/224.1.4.111:11111
+#EXTINF:-1 group-title="一带一路",MTV Live
+http://1.170.136.51:8022/udp/230.1.2.246:11111
+#EXTINF:-1 group-title="一带一路",CMusic
+http://1.170.136.51:8022/udp/224.1.4.159:11111
+#EXTINF:-1 group-title="一带一路",Mezzo Live HD
+http://1.170.136.51:8022/udp/224.1.4.240:11111
+#EXTINF:-1 group-title="一带一路",Discovery Asia
+http://1.170.136.51:8022/udp/230.1.2.168:11111
+#EXTINF:-1 group-title="一带一路",BBC Earth
+http://1.170.136.51:8022/udp/230.1.2.172:11111
+#EXTINF:-1 group-title="一带一路",BBC Lifestyle
+http://1.170.136.51:8022/udp/230.1.2.10:11111
+#EXTINF:-1 group-title="一带一路",DMAX
+http://1.170.136.51:8022/udp/230.1.2.13:11111
+#EXTINF:-1 group-title="一带一路",Love Nature
+http://1.170.136.51:8022/udp/224.1.4.182:11111
+#EXTINF:-1 group-title="一带一路",Animax
+http://1.170.136.51:8022/udp/224.1.4.237:11111
+#EXTINF:-1 group-title="一带一路",CARTOONITO
+http://1.170.136.51:8022/udp/224.1.4.15:11111
+#EXTINF:-1 group-title="一带一路",Nickelodeon Asia
+http://1.170.136.51:8022/udp/224.1.4.249:11111
+#EXTINF:-1 group-title="一带一路",Nick Jr.
+http://1.170.136.51:8022/udp/224.1.4.179:11111
+#EXTINF:-1 group-title="一带一路",CBeebies
+http://1.170.136.51:8022/udp/224.1.4.213:11111
+#EXTINF:-1 group-title="一带一路",DreamWorks
+http://1.170.136.51:8022/udp/224.1.4.121:11111
+#EXTINF:-1 group-title="一带一路",ELEVEN SPORTS PLUS
+http://1.170.136.51:8022/udp/224.1.4.115:11111
+#EXTINF:-1 group-title="一带一路",ELEVEN SPORTS 2
+http://1.170.136.51:8022/udp/224.1.4.156:11111
+#EXTINF:-1 group-title="一带一路",EUROSPORT
+http://1.170.136.51:8022/udp/224.1.4.135:11111
+#EXTINF:-1 group-title="一带一路",Food Network
+http://1.170.136.51:8022/udp/224.1.4.211:11111
+#EXTINF:-1 group-title="一带一路",Asian Food Network
+http://1.170.136.51:8022/udp/230.1.2.233:11111
+#EXTINF:-1 group-title="一带一路",Travel Channel
+http://1.170.136.51:8022/udp/230.1.2.166:11111
 #EXTINF:-1 group-title="上海",=====【上海】=====
 http://#
 #EXTINF:-1 group-title="上海",上海新闻综合
@@ -521,6 +587,126 @@ http://gslbmgsplive.miguvideo.com/migu/kailu/saishijingdian/51/20250514/index.m3
 http://gslbmgsplive.miguvideo.com/wd_r2/jstv/lygxinwenzonghe/600/index.m3u8?msisdn=723c6e1a09a015a6879f5dded0055a0f&mdspid=&spid=699067&netType=0&sid=5500469369&pid=2028597139&timestamp=20261119061059&Channel_ID=0116_2600034600-99000-201600010010028&ProgramID=639731715&ParentNodeID=-99&assertID=5500469369&client_ip=39.103.188.159&SecurityKey=20261119061059&promotionId=&mvid=5102012621&mcid=500020&playurlVersion=WX-A1-9.11.1-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=b1bdb5d1ae91555e571f29d9837327eb&ddCalcu=bbe1v7ba2dx3ba753d819ade9921f515755e&sv=10004&ct=android
 #EXTINF:-1 group-title="地下党",镇江新闻综合
 http://gslbmgsplive.miguvideo.com/migu/kailu/zjxwzh/50/20251127/index.m3u8?msisdn=5f5faf966f2a0e0a03e3527325c4680c&mdspid=&spid=699067&netType=0&sid=5500469365&pid=2028597139&timestamp=20261119061103&Channel_ID=0116_2600034600-99000-201600010010028&ProgramID=639731783&ParentNodeID=-99&assertID=5500469365&client_ip=39.103.188.159&SecurityKey=20261119061103&promotionId=&mvid=5102012619&mcid=500020&playurlVersion=WX-A1-9.11.1-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=7966250270ae8c8d911fc6a6eb7f7baf&ddCalcu=f7a9vb6a76xf2a75b0e267a06acef81c189d&sv=10004&ct=android
+#EXTINF:-1 group-title="地下党",中視
+http://1.170.136.51:8022/udp/224.1.4.10:11111
+#EXTINF:-1 group-title="地下党",中視(備)
+http://1.170.136.51:8022/udp/230.1.2.228:11111
+#EXTINF:-1 group-title="地下党",華視
+http://1.170.136.51:8022/udp/224.1.4.12:11111
+#EXTINF:-1 group-title="地下党",華視(備)
+http://1.170.136.51:8022/udp/230.1.2.229:11111
+#EXTINF:-1 group-title="地下党",台視
+http://1.170.136.51:8022/udp/224.1.4.8:11111
+#EXTINF:-1 group-title="地下党",台視(備)
+http://1.170.136.51:8022/udp/230.1.2.227:11111
+#EXTINF:-1 group-title="地下党",民視
+http://1.170.136.51:8022/udp/224.1.4.6:11111
+#EXTINF:-1 group-title="地下党",民視(備)
+http://1.170.136.51:8022/udp/230.1.2.226:11111
+#EXTINF:-1 group-title="地下党",公視
+http://1.170.136.51:8022/udp/224.1.4.53:11111
+#EXTINF:-1 group-title="地下党",公視(備)
+http://1.170.136.51:8022/udp/230.1.2.230:11111
+#EXTINF:-1 group-title="地下党",中視新聞台
+http://1.170.136.51:8022/udp/224.1.4.252:11111
+#EXTINF:-1 group-title="地下党",中視新聞台(備)
+http://1.170.136.51:8022/udp/224.1.4.50:11111
+#EXTINF:-1 group-title="地下党",TVBS新聞台
+http://1.170.136.51:8022/udp/224.1.4.13:11111
+#EXTINF:-1 group-title="地下党",TVBS新聞台(備)
+http://1.170.136.51:8022/udp/224.1.4.152:11111
+#EXTINF:-1 group-title="地下党",民視新聞台
+http://1.170.136.51:8022/udp/224.1.4.97:11111
+#EXTINF:-1 group-title="地下党",民視新聞台(備)
+http://1.170.136.51:8022/udp/230.1.2.155:11111
+#EXTINF:-1 group-title="地下党",台視新聞台
+http://1.170.136.51:8022/udp/224.1.4.215:11111
+#EXTINF:-1 group-title="地下党",台視新聞台(備)
+http://1.170.136.51:8022/udp/230.1.2.99:11111
+#EXTINF:-1 group-title="地下党",華視新聞資訊台
+http://1.170.136.51:8022/udp/224.1.4.55:11111
+#EXTINF:-1 group-title="地下党",華視新聞資訊台(備)
+http://1.170.136.51:8022/udp/230.1.2.248:11111
+#EXTINF:-1 group-title="地下党",TVBS歡樂台
+http://1.170.136.51:8022/udp/224.1.4.154:11111
+#EXTINF:-1 group-title="地下党",TVBS精采台
+http://1.170.136.51:8022/udp/230.1.2.225:11111
+#EXTINF:-1 group-title="地下党",非凡新聞台
+http://1.170.136.51:8022/udp/224.1.4.158:11111
+#EXTINF:-1 group-title="地下党",三立財經新聞台
+http://1.170.136.51:8022/udp/230.1.2.191:11111
+#EXTINF:-1 group-title="地下党",三立新聞(映射用)
+http://1.170.136.51:8022/udp/230.1.2.21:11111
+#EXTINF:-1 group-title="地下党",半島英語新聞台
+http://1.170.136.51:8022/udp/230.1.2.128:11111
+#EXTINF:-1 group-title="地下党",德國之聲電視台
+http://1.170.136.51:8022/udp/224.1.4.120:11111
+#EXTINF:-1 group-title="地下党",NHK新聞資訊台
+http://1.170.136.51:8022/udp/224.1.4.137:11111
+#EXTINF:-1 group-title="地下党",民視第一台
+http://1.170.136.51:8022/udp/224.1.4.218:11111
+#EXTINF:-1 group-title="地下党",民視第一台(備)
+http://1.170.136.51:8022/udp/224.1.4.77:11111
+#EXTINF:-1 group-title="地下党",台視綜合台
+http://1.170.136.51:8022/udp/224.1.4.170:11111
+#EXTINF:-1 group-title="地下党",中視經典台
+http://1.170.136.51:8022/udp/224.1.4.219:11111
+#EXTINF:-1 group-title="地下党",中視菁采台
+http://1.170.136.51:8022/udp/230.1.2.224:11111
+#EXTINF:-1 group-title="地下党",民視台灣台
+http://1.170.136.51:8022/udp/224.1.4.227:11111
+#EXTINF:-1 group-title="地下党",三立戲劇台
+http://1.170.136.51:8022/udp/230.1.2.232:11111
+#EXTINF:-1 group-title="地下党",三立綜合台
+http://1.170.136.51:8022/udp/230.1.2.192:11111
+#EXTINF:-1 group-title="地下党",龍華戲劇
+http://1.170.136.51:8022/udp/224.1.4.41:11111
+#EXTINF:-1 group-title="地下党",龍華偶像
+http://1.170.136.51:8022/udp/224.1.4.39:11111
+#EXTINF:-1 group-title="地下党",龍華經典
+http://1.170.136.51:8022/udp/224.1.4.172:11111
+#EXTINF:-1 group-title="地下党",華藝影劇台
+http://1.170.136.51:8022/udp/230.1.2.17:11111
+#EXTINF:-1 group-title="地下党",華藝MBC綜合台
+http://1.170.136.51:8022/udp/224.1.4.130:11111
+#EXTINF:-1 group-title="地下党",EYE TV戲劇台
+http://1.170.136.51:8022/udp/224.1.4.60:11111
+#EXTINF:-1 group-title="地下党",amc電影台
+http://1.170.136.51:8022/udp/224.1.4.43:11111
+#EXTINF:-1 group-title="地下党",Discovery科學頻道
+http://1.170.136.51:8022/udp/230.1.2.12:11111
+#EXTINF:-1 group-title="地下党",歷史頻道
+http://1.170.136.51:8022/udp/230.1.2.216:11111
+#EXTINF:-1 group-title="地下党",i-Fun動漫台
+http://1.170.136.51:8022/udp/230.1.2.223:11111
+#EXTINF:-1 group-title="地下党",曼迪日本台
+http://1.170.136.51:8022/udp/230.1.2.242:11111
+#EXTINF:-1 group-title="地下党",博斯運動一台
+http://1.170.136.51:8022/udp/224.1.4.48:11111
+#EXTINF:-1 group-title="地下党",博斯高球一台
+http://1.170.136.51:8022/udp/224.1.4.49:11111
+#EXTINF:-1 group-title="地下党",博斯網球台
+http://1.170.136.51:8022/udp/224.1.4.66:11111
+#EXTINF:-1 group-title="地下党",愛爾達體育1台
+http://1.170.136.51:8022/udp/224.1.4.112:11111
+#EXTINF:-1 group-title="地下党",NBA動態
+http://1.170.136.51:8022/udp/224.1.4.144:11111
+#EXTINF:-1 group-title="地下党",HGTV 居家樂活
+http://1.170.136.51:8022/udp/224.1.4.183:11111
+#EXTINF:-1 group-title="地下党",大愛電視
+http://1.170.136.51:8022/udp/224.1.4.54:11111
+#EXTINF:-1 group-title="地下党",人間衛視
+http://1.170.136.51:8022/udp/224.1.4.89:11111
+#EXTINF:-1 group-title="地下党",客家電視
+http://1.170.136.51:8022/udp/224.1.4.17:11111
+#EXTINF:-1 group-title="地下党",原住民族電視台
+http://1.170.136.51:8022/udp/224.1.4.76:11111
+#EXTINF:-1 group-title="地下党",公視台語台
+http://1.170.136.51:8022/udp/230.1.2.31:11111
+#EXTINF:-1 group-title="地下党",公視2台
+http://1.170.136.51:8022/udp/230.1.2.185:11111
+#EXTINF:-1 group-title="地下党",公視3台
+http://1.170.136.51:8022/udp/224.1.4.228:11111
 #EXTINF:-1 group-title="天津",=====【天津】=====
 http://#
 #EXTINF:-1 group-title="天津",天津卫视
